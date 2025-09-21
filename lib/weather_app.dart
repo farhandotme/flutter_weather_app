@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/ui/additional_items.dart';
 import 'package:weather_app/ui/hourly_forcast_card.dart';
+import 'package:weather_icons/weather_icons.dart';
 
 class weather_app extends StatefulWidget {
   const weather_app({super.key});
@@ -67,15 +68,37 @@ class _weather_appState extends State<weather_app> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  hourlyForcastCard(),
-                  hourlyForcastCard(),
-                  hourlyForcastCard(),
-                  hourlyForcastCard(),
-                  hourlyForcastCard(),
+                  hourlyForcastCard(
+                    icon: WeatherIcons.cloud,
+                    temprature: "301.00",
+                    time: "1:00",
+                  ),
+                  hourlyForcastCard(
+                    icon: WeatherIcons.cloud,
+                    temprature: "302.10",
+                    time: "2:00",
+                  ),
+                  hourlyForcastCard(
+                    icon: WeatherIcons.day_sunny,
+                    temprature: "339.00",
+                    time: "3:00",
+                  ),
+                  hourlyForcastCard(
+                    icon: WeatherIcons.cloud,
+                    temprature: "243.00",
+                    time: "4:00",
+                  ),
+                  hourlyForcastCard(
+                    icon: WeatherIcons.rain,
+                    temprature: "224.00",
+                    time: "5:00",
+                  ),
                 ],
               ),
             ),
             SizedBox(height: 20),
+
+            // Additional information
             Text(
               "Additional Information",
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
